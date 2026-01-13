@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+</head>
+<body>
+  <h4 style="font-family: 'Times New Roman', Times, serif;">Cart Quantity</h4>
+  <div>
+
+
+    <button id="1" 
+    onclick="updateCartQuantity(0);"
+    >Show Quantity</button>
+    <button id="2" 
+    onclick="updateCartQuantity(1);
+    // cartQuantity += 1; variable re-assigning shortcut
+    // cartQuantity ++;
+    ">Add to Cart</button>
+    <button id="3" 
+    onclick="updateCartQuantity(2);
+    // cartQuantity += 2;
+    ">+2</button>
+    <button id="4" 
+    onclick="updateCartQuantity(3);
+    ">+3</button>
+    <button id="5"
+    onclick="updateCartQuantity(4);
+    ">+4</button>
+    <button id="6" onclick="updateCartQuantity(5);
+    ">+5</button>
+
+
+
+    <div style="padding-top: 15px;">
+      <button id="7" onclick="updateCartQuantity(-1);
+      ">Remove from cart</button>
+      <button id="8" 
+      onclick="updateCartQuantity(-2);
+      ">-2</button>
+      <button id="9" 
+      onclick="updateCartQuantity(-3);
+      ">-3</button>
+      <button id="10" 
+      onclick="cartQuantity = 0; console.log(`Cart is Reset`); console.log(`Cart Quantity: ${cartQuantity}`);"
+      >Reset Cart</button>
+    </div>
+
+  </div>
+  <script>
+    let cartQuantity = 0;
+    function updateCartQuantity(change){
+      if(cartQuantity+change >10){
+        alert('The cart is full');
+        return;
+      }
+      if(cartQuantity+change < 0){
+        alert('Not enough items in the cart');
+        return;
+      }
+      cartQuantity += change;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+
+    }
+  </script>
+</body>
+</html>

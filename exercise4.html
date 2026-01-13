@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise4</title>
+</head>
+<body>
+  <script>
+    
+    const product1={
+      name: 'basketball',
+      price: 2095
+    };
+
+    const product2={
+      name: 't-shirt',
+      price: 799
+    };
+    // console.log(product1);
+    // product.price = 2095+500;
+    // console.log(product1);
+    // product['delivery-time'] = '3 days';s
+    // console.log(product1);
+
+
+    function comparePrice(productA, productB){
+      if(productA.price < productB.price){
+        return productA;
+      }
+      else{
+        return productB;
+      }
+    }
+      const cheapProduct = comparePrice(product1, product2);
+      console.log(`The cheap product is`, cheapProduct);
+
+      function isSameProduct(productA, productB){
+        if(productA.name === productB.name && productA.price === productB.price){
+          return true;
+        }else{
+          return false;
+        }
+      }
+
+      const productSame = isSameProduct(product1, product2);
+      console.log(productSame);
+
+      console.log('JITESH'.toLowerCase());
+      console.log('test'.repeat(5));
+  </script>
+</body>
+</html>

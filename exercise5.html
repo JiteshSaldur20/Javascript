@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise5</title>
+</head>
+<body>
+  <!-- <button>9a</button>
+  <button class="Second-button">9b</button>
+  <script>
+    console.log(document.querySelector('button'));
+    document.querySelector('.Second-button')
+      .innerHTML='9b done!';
+  </script> -->
+
+  <!-- <button onclick="game('heads')">heads</button>
+  <button onclick="game('tails')">tails</button>
+  <p></p>
+  <script>
+    function game(parameter){
+      let guess = parameter;
+      document.querySelector('p')
+        .innerHTML = `you choose: ${guess}`  
+    }
+  </script> -->
+
+
+  <input class="js-name" placeholder="Name" onkeydown="accesskey(event)">
+  <button onclick="givingName();">Submit</button>
+  <p></p>
+  <script>
+    function accesskey(event){
+      if(event.key === 'Enter'){
+        givingName();
+      }
+    }
+    function givingName(){
+      const Name = document.querySelector('.js-name');
+      let variable = Name.value;
+      document.querySelector('p')
+        .innerHTML = `Your name is ${variable}`;
+    }
+  </script>
+</body>
+</html>

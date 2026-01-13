@@ -1,0 +1,26 @@
+  body{
+    background-color: black;
+  }
+  p{
+    color: white;
+  }
+  .clear{
+      width: 205px;
+      height: 30px;
+      border-radius: 10px;
+  }
+  .orange-buttons{
+    background-color: orange;
+  }
+  div{
+    margin: 5px;
+  }
+  button{
+    border-radius: 85px;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    background-color: grey;
+    color: white;
+  }
+  

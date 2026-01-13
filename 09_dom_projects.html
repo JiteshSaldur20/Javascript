@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>domProjects</title>
+</head>
+<body>
+  
+  <p>YouTube Subscribe Button</p>
+  <button class="js-subscribe-button" onclick="changing();">
+  Subscribe
+  </button>
+
+  <script>
+
+    function changing(){
+      const buttonElement = document.querySelector('.js-subscribe-button');
+
+      if(buttonElement.innerText === 'Subscribe'){
+        buttonElement.innerHTML = 'Subscribed';
+      }
+      else{
+        buttonElement.innerHTML = 'Subscribe';
+      }
+    }
+
+  </script>
+</body>
+    <!-- innerText property gives us the text inside the elements without the spaces around the text-->
+</html>
