@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  /*const num = [10,20,30];
+
+  num[2]=99;
+  console.log(num);*/
+
+  getLastValue([1,20,22,24,5]);
+  arraySwap([1,20,22,24,5]);
+  getLastValue(['hi','hello', 'good']);
+
+  function getLastValue(array){
+    let lastIndex = array.length-1
+    console.log(array[lastIndex])
+  }
+
+  function arraySwap(array){
+    let lastIndex1 = array[0];
+    array[0] = array[array.length-1];
+    array[array.length-1]=lastIndex1;
+
+    console.log(array);
+  }
+
+
+  // for(let i=0; i<=5; i++){
+  //   let num = i*2
+  //   console.log(num);
+  // }
+
+  // for(let i=5; i>=0; i--){
+  //   console.log(i)
+  // }
+
+ /* let i=0;
+  while(i<=5){
+    let num = i*2
+    console.log(num);
+    i++;
+  }
+
+  let j=5;
+  while(j>=0){
+    console.log(j);
+    j--;
+  }*/
+
+  let array1 = [1,2,3];
+  for(let i=0; i<array1.length; i++){
+    let num = array1[i] + 1;
+    console.log(num);
+  }
+
+
+  addOne([-2,-1,0,99])
+  function addOne(array){
+    for(let i=0; i<array.length; i++){
+    let num = array[i] + 1;
+    console.log(num);
+  }
+  }
+</script>
+</html>
