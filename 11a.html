@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Arrays and loops part1 all the exercises problems</title>
 </head>
 <body>
   
@@ -14,7 +14,7 @@
   num[2]=99;
   console.log(num);*/
 
-  getLastValue([1,20,22,24,5]);
+  /*getLastValue([1,20,22,24,5]);
   arraySwap([1,20,22,24,5]);
   getLastValue(['hi','hello', 'good']);
 
@@ -29,7 +29,7 @@
     array[array.length-1]=lastIndex1;
 
     console.log(array);
-  }
+  }*/
 
 
   // for(let i=0; i<=5; i++){
@@ -54,7 +54,7 @@
     j--;
   }*/
 
-  let array1 = [1,2,3];
+  /*let array1 = [1,2,3];
   for(let i=0; i<array1.length; i++){
     let num = array1[i] + 1;
     console.log(num);
@@ -67,6 +67,36 @@
     let num = array[i] + 1;
     console.log(num);
   }
+  }*/
+
+
+  /*addNum([1,2,3],2);
+  addNum([1,2,3],3);
+  addNum([-2,-1,0,99],2);
+  function addNum(array,num){
+    for(let i=0; i<array.length; i++){
+      let add = array[i]+num;
+      console.log(add);
+    }
+  }*/
+
+
+  addArrays([1,1,2],[1,1,3]);
+  addArrays([1,2,3],[4,5,6]);
+  function addArrays(array1, array2){
+    for(let i=0; i<array1.length; i++){
+      let merge = array1[i]+array2[i]
+      console.log(merge);
+    }
+  }
+
+  countPositive([1,-3,5])
+  function countPositive(nums){
+    for(let i=0; i<nums.length; i++){
+      if(nums[i]>=0){
+        console.log(i);
+      }
+    }
   }
 </script>
 </html>
