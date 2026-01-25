@@ -8,21 +8,48 @@
 <body>
 </body>
 <script>
-  minMax([1,-3,5]);
+  minMax([3]);
 
   function minMax(nums){
-    let minimum = nums[0];
-    let maximum = nums[0];
-    for(let i=0; i<nums.length; i++){
-      if(nums[i]<minimum){
-        minimum=nums[i];
+
+    if(nums.length===0){
+      console.log(`The minimum number is Null`);
+      console.log(`The maximum number is Null`);
+    }else{
+
+      let minimum = nums[0];
+      let maximum = nums[0];
+      for(let i=0; i<nums.length; i++){
+        if(nums[i]<minimum){
+          minimum=nums[i];
+        }
+        if(nums[i]>maximum){
+          maximum = nums[i];
+        }
       }
-      if(nums[i]>maximum){
-        maximum = nums[i];
+      console.log(`The minimum number is ${minimum}`);
+      console.log(`The maximum number is ${maximum}`);
+    }
+
+  }
+
+
+  //Create a function count words that takes an array of stings and return an object with how many times each string appeared
+  const theArray = ['apple','grape','apple', 'apple']
+  function countWords(words){
+    const result={};
+
+    for(let i=0; i<words.length; i++){
+      const word = words[i];
+
+      if(!result[word]){
+        result[word]=1;
+      }else{
+        result[word]++;
       }
     }
-    console.log(`The minimum number is ${minimum}`);
-    console.log(`The maximum number is ${maximum}`);
+    return result;
   }
+  console.log(countWords(theArray));
 </script>
 </html>

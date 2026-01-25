@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple todo list</title>
+</head>
+<body>
+  <p>Todo List</p>
+  <input type="text" class="js-input" >
+  <input type="date">
+  <button class="js-button" onclick="addingInput()">Add</button>
+  <div class="js-display"></div>
+</body>
+<script>
+  let todoArray=[];
+  function renderingArray(){
+    let arrayHtml = '';
+    for(let i=0; i<todoArray.length; i++){
+      const enteredVal = todoArray[i];
+      const html = `<p>${enteredVal} <button> Delete </button></p>`;
+      arrayHtml +=html;
+    }
+    document.querySelector('.js-display')
+      .innerHTML = arrayHtml;
+  }
+
+  function addingInput(){
+    
+    const inputElement = document.querySelector('.js-input')
+    const insideName = inputElement.value;
+    
+    todoArray.push(insideName)
+    console.log(todoArray)
+
+    inputElement.value ='';
+    renderingArray();
+  }
+</script>
+</html>
