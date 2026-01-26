@@ -75,6 +75,54 @@
     }
     console.log(numsDoubled);*/
 
+    // arrya's are references they share the object address not the object
+    const array = [1,1,3];
+    const array2 = array;
+
+    array2.push(4);
+    console.log(array);
+    console.log(array2);
+
+    //another example of destructring
+    //easier way to get the value inside the array and assign them variables.
+    const [firstValue, secondValue] = [1,5,7];
+    console.log(firstValue);
+
+    for(let i=1; i<=10; i++){
+      if(i%3===0){
+        continue;
+      }
+      console.log(i);
+      if(i===8){
+        break;
+      }
+    }
+
+    let i=1;
+    while(i<=10){
+      if(i%3===0){
+        i++;//in while loop the continue will skip the increment step for that we assigned the increment operator here.
+        continue;
+      }
+      console.log(i);
+      i++;
+    }
+
+    //How to use loops with functions
+    function numDouble(nums){
+      
+      const numDouble =[];
+      for(let i=0; i<nums.length;i++){
+        const result = nums[i];
+        if(result === 0){
+          return numDouble;
+        }
+        numDouble.push(result*2);
+      }
+      return numDouble;
+    }
+    console.log(numDouble([1,1,3]));
+    console.log(numDouble([2,2,5,0,5]));
     
   </script>
 </body>
