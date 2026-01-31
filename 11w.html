@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11w</title>
+</head>
+<body>
+  
+</body>
+<script>
+  
+    function findIndex(array, word){
+    let found = false;
+    for(let i=0; i<array.length;i++){
+      const result = array[i];
+      if(word === result){
+        found = true;
+        return i;
+      }
+    }
+    if(!found){
+      return -1;
+    }
+  }
+
+
+  function uniqueness(array){
+    const unique =[];
+    for(let i=0; i<array.length;i++){
+    isDuplicate=false;
+     for(let j=0;j<unique.length;j++){
+      if(array[i]===unique[j]){
+        isDuplicate=true;
+        break;
+      }
+     }
+     if(!isDuplicate){
+      unique.push(array[i]);
+     } 
+    }
+    return unique;
+  }
+
+  console.log(findIndex(['Jitesh', 'Jaysingh', 'Saldur'], 'Jaysingh'));
+  console.log(uniqueness(['Jitesh', 'Jaysingh', 'Saldur','Jaysingh']));
+</script>
+</html>
