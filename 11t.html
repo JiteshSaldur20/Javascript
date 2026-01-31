@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11t</title>
+</head>
+<body>
+  <p class="names"></p>
+</body>
+<script>
+  
+  const veggies = ['egg', 'brocali', 'ham','egg', 'cheese', 'peas', 'egg'];
+
+    function findEgg(food){
+    const reversed = [...food].reverse();//we use the [...food] here this creates the copy of the array and does not makes change in the main array.
+    const result =[];
+    let eggcount=0;
+    for(let i=0; i<reversed.length; i++){
+      if(reversed[i]==='egg' && eggcount<2){
+        eggcount++;
+        continue;
+      }
+      result.push(reversed[i]);
+    }
+    return result;
+  }
+  document.querySelector('.names')
+    .innerHTML = findEgg(veggies);
+  console.log(veggies);
+</script>
+</html>

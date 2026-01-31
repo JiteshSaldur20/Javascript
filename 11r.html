@@ -10,18 +10,17 @@
 </body>
 <script>
     //11r
-  function removeEgg(foods){
-    let array1 = [];
-    for(let i=0; i<foods.length; i++){
-      const remove = foods[i];
-      if(remove === 'egg'){
-        continue;
+  const veggies = ['egg', 'brocali', 'egg', 'ham', 'chesee'];
+
+  function eatingGood(food){
+    const result = [];
+    for(let i=0; i<food.length; i++){
+      if(food[i]!== 'egg'){
+        result.push(food[i]);
       }
-      array1.push(remove)
-      return array1;
     }
+    return result;
   }
-  const veggies = ['egg', 'broccli', 'egg', 'apple', 'ham'];
-  console.log(removeEgg(veggies));
+  console.log(eatingGood(veggies));
 </script>
 </html>

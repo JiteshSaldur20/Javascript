@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updating 11r</title>
+</head>
+<body>
+  <p class="names"></p>
+</body>
+<script>
+  const veggies = ['egg', 'brocali', 'ham','egg', 'cheese', 'peas', 'egg'];
+  /*function veg(food){
+    const result =[];
+    for(let i =0; i<food.length;i++){
+      if(food[i]!== 'egg'){
+        result.push(food[i]);
+      }
+    }
+    return result;
+  }
+  document.querySelector('.names')
+    .innerHTML = veg(veggies);*/
+
+  function findEgg(food){
+    const result =[];
+    let eggcount=0;
+    for(let i=0; i<food.length; i++){
+      if(food[i]==='egg' && eggcount<2){
+        eggcount++;
+        continue;
+      }
+      result.push(food[i]);
+    }
+    return result;
+  }
+  document.querySelector('.names')
+    .innerHTML = findEgg(veggies);
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11u</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const veggies=['egg','beans','ham', 'peas', 'brocali', 'egg', 'egg']
+
+  function semiVegan(food){
+    const copy = food.slice()
+    const reversed = copy.reverse()
+    const result =[];
+    let eggcount = 0;
+    for(let i=0; i<reversed.length;i++){
+      if(reversed[i] === 'egg' && eggcount<2){
+        eggcount++;
+        continue;
+      }
+      result.push(reversed[i]);
+    }
+    return result;
+  }
+  console.log(semiVegan(veggies));
+</script>
+</html>
